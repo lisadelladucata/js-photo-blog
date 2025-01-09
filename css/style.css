@@ -17,20 +17,25 @@ img {
     LAYOUT
 ------------------*/
 .container {
-    max-width: 1200px;
+    max-width: 900px;
     margin: auto;
-    display: flex;
 }
 .row {
     display: flex;
+    flex-wrap: wrap;
 }
 
-.gap-30 {
-    gap: 30px;
+.gap-20 {
+    gap: 20px;
 }
 .col {
     flex-grow: 1;
-    width: calc(100% /3);
+    width: calc(100% /4);
+    background-color: #fff;
+    margin: 40px 0px;
+    padding: 20px 10px;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /*----------------
@@ -51,7 +56,25 @@ header{
 }
 
 header h1{
-    font-size: 40px;
+    font-size: 50px;
     text-align: center;
     padding: 20px 0px;
+}
+
+/*----------------
+    MAIN
+------------------*/
+
+main{
+    background-image: url('/img/cork.png');
+}
+
+.col p{
+    color: gray;
+}
+
+.col .pin{
+    position: absolute;
+    top: 0px;
+    left: 43%;
 }
