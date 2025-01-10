@@ -17,4 +17,21 @@ axios.get('https://jsonplaceholder.typicode.com/photos?_limit=6')
                                 </div>`;
     counter++;
   });
+
+  const overlayCard = document.querySelectorAll(".col")
+  const hidden = document.querySelector('.hidden')
+  const overlayBtn = document.querySelector(".btn-overlay")
+  const ImgProveOverlay = hidden.querySelector('img')
+
+  overlayCard.forEach((overlayCard) => {
+    overlayCard.addEventListener("click", () =>{
+      const overlayImg = overlayCard.querySelector(".img img").src;
+      ImgProveOverlay.src = overlayImg;
+
+      hidden.style.display = 'block';
+    })
+  });
+  overlayBtn.addEventListener("click", () => {
+    hidden.style.display= 'none'
+  });
   });
