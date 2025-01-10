@@ -6,7 +6,6 @@ console.log(infoElm , imgElm)
 
 axios.get('https://jsonplaceholder.typicode.com/photos?_limit=6')
   .then(function (response) {
-    console.log(response.data)
     let counter = 0
     const info = response.data
     info.forEach(function (info) {
